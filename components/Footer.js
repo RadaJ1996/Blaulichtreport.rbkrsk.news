@@ -1,0 +1,1 @@
+export default function Footer(){return <footer><div className="wrap"><strong>Einsatzreport.rbkrsk</strong><br/>Die Blaulichtnews aus dem Bergischen<br/><br/>© {new Date().getFullYear()} Einsatzreport.rbkrsk</div></footer>}

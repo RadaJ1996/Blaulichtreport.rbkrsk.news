@@ -1,0 +1,1 @@
+import LoginForm from "../../components/LoginForm";export default function Login(){return <main className="wrap" style={{maxWidth:520,paddingTop:70}}><h1>Redaktionsbereich</h1><p>Nur für die beiden autorisierten Redakteure.</p><LoginForm/></main>}

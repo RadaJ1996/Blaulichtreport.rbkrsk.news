@@ -1,0 +1,2 @@
+"use client";import {useRouter} from "next/navigation";import {useState} from "react";
+export default function DeleteButton({id}){const [busy,setBusy]=useState(false);const router=useRouter();async function remove(){if(!confirm("Bericht wirklich löschen?"))return;setBusy(true);const r=await fetch("/api/posts/delete",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({id})});if(r.ok)router.refresh();else setBusy(false)}return <button className="btn" onClick={remove} disabled={busy}>{busy?"Löschen…":"Löschen"}</button>}
